@@ -4,6 +4,11 @@ Runing Keras(Background: TensorFlow) with Intel Movidius Neural Compute Stick
 
 ## The under construction!
 
+#### Intel Movidius Neural Compute Stick
+
+<img src="Assets/Intel_Movidius_NCS.jpg" width="500"><br/>
+Thank `Mustafa Aldemir` and `Intel Corporation Turkey` very much for this gift !
+
 # About Intel Movidius Neural Compute Stick:
 Official Web Page: [developer.movidius.com](https://developer.movidius.com)
 
@@ -36,6 +41,12 @@ This command creates and saves graph file as `<Output_Graph>`.
 `python3 keras2graph.py Keras_Model/model.json input_1 activation_7/Softmax Keras_Model/weights.h5 ./graph`
 
 ## Functions:
+
+- [keras_to_graph](#keras_to_graph)
+- [get_keras_model](#get_keras_model)
+- [keras_to_tf](#keras_to_tf)
+- [tf_to_graph](#tf_to_graph)
+
 ### keras_to_graph
 keras_to_graph(model_path, model_in, model_out, weights_path, graph_path, take_tf_files = False)
 
@@ -91,6 +102,16 @@ For converting TensorFlow graph to Intel Movidius technology internal compiled f
 
 # NCS Process:
 File: ncs_process.py
+
+## Functions:
+
+#### [All in one functions](#all-in-one-functions)
+- [ready_ai_ncs](#ready_ai_ncs)
+- [release_ai_ncs](#release_ai_ncs)
+
+#### [Functions](#functions-1)
+- [ncs_predict](#ncs_predict)
+
 ## All in one functions:
 
 ### ready_ai_ncs

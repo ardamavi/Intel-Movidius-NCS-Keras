@@ -23,10 +23,9 @@ def get_keras_model(model_path, weights_path):
     return model
 
 def keras_to_tf(tf_model_path):
-    init = tf.global_variables_initializer()
     saver = tf.train.Saver()
     with K.get_session() as sess:
-        sess.run(init)
+        K.set_learning_phase(0)
         saver.save(sess, tf_model_path)
     return True
 
